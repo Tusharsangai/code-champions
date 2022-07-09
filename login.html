@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <style>
+    body {
+      background: linear-gradient(to top left, #5117ad, rgb(38, 38, 248));
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Inter", sans-serif;
+      padding: 85px 0px;
+      user-select: none;
+    }
+
+
+    .container>div {
+      padding: 50px;
+      border: 1px solid gray;
+      border-radius: 15px;
+      text-align: center;
+      background-color: #ffffffea;
+      transition: all 0.75s;
+
+
+    }
+
+
+    .container>div>div:nth-child(1) {
+      padding: 50px 0px;
+      font-size: 45px;
+      font-weight: 500;
+    }
+
+    .container input {
+      width: 95%;
+      border: none;
+      border-bottom: 3px solid #aaa4a4c0;
+      margin: 30px 0px;
+      font-size: 21px;
+      padding: 0px 10px 15px;
+      background: #eeedfc;
+    }
+
+    .container input:focus {
+      outline: none;
+
+    }
+
+    .container>div input[type="submit"] {
+      background: linear-gradient(to right, #0066ff, #2f00ff, purple);
+      border: none;
+      padding: 22px 0px;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .container>div>div:nth-child(3) {
+      padding: 30px;
+      color: #686767;
+    }
+
+    .container>div>div:nth-child(3) a {
+      text-decoration: none;
+      color: #191997a4;
+      font-weight: 600;
+    }
+
+    /* all media queries are written here */
+
+
+    @media all and (max-width:500px) {
+      body {
+        background: linear-gradient(to top left, #5117ad, rgb(38, 38, 248));
+      }
+
+
+      .container>div {
+        width: 100%;
+        padding: 50px 20px;
+        overflow: hidden;
+      }
+
+      .container>div input {
+        padding: 0px 10px;
+        transition: all 1.5s;
+      }
+
+      .container>div input[type="text"],
+      .container>div input[type="password"] {
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+  let body = document.querySelector("body");
+  let container = document.createElement("div");
+  container.setAttribute("class", "container");
+  let box = document.createElement("div");
+
+
+  /* login text */
+  let heading = document.createElement("div");
+  heading.innerText = "Login";
+
+
+  /* input for name and email */
+  let formContainer = document.createElement("div");
+  let form = document.createElement("form");
+
+
+  /* email input */
+  let name = document.createElement("input");
+  name.setAttribute("placeholder", "Email");
+  name.setAttribute("type", "text");
+
+
+  /* password input */
+  let password = document.createElement("input");
+  password.setAttribute("placeholder", "Password");
+  password.setAttribute("type", "password");
+
+
+  /* login button */
+  let loginBtn = document.createElement("input")
+  loginBtn.setAttribute("type", "submit");
+  loginBtn.setAttribute("value", "Login");
+
+
+  /* creating break element */
+  let lineBreakOne = document.createElement("br");
+  let lineBreakTwo = document.createElement("br");
+
+  /* appending all the inputs to form and appending the form to formContainer */
+  form.append(name, lineBreakOne, password, lineBreakTwo, loginBtn);
+
+  formContainer.append(form);
+
+  /* bottom link area */
+
+  let linkContainer = document.createElement("div");
+
+  /* forgot password section */
+  let linkOne = document.createElement("p");
+  linkOne.innerText = "Forgot";
+  let resetPwd = document.createElement("a");
+  resetPwd.innerText = "Password";
+  resetPwd.style.padding = "0px 10px";
+
+
+  /* appending links to first paragraph  */
+  linkOne.append(resetPwd);
+
+  /* signup section */
+  let linkTwo = document.createElement("p");
+  linkTwo.innerText = "Don't have an account? ";
+  let signupLink = document.createElement("a");
+  signupLink.innerText = "Sign up";
+
+
+  /* appending links to second paragraph */
+  linkTwo.append(signupLink);
+
+  /* appending bottom links to linkContainer */
+  linkContainer.append(linkOne);
+  linkContainer.append(linkTwo);
+
+
+
+  // box.append(heading, formContainer, linkContainer);
+  box.append(heading, formContainer, linkContainer);
+
+  container.append(box);
+  body.append(container);
+
+
+</script>
