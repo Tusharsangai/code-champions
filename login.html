@@ -5,7 +5,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
     rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -167,6 +167,12 @@
   let linkOne = document.createElement("p");
   linkOne.innerText = "Forgot";
   let resetPwd = document.createElement("a");
+
+  /* Here add link for resetting the password  */
+
+
+
+
   resetPwd.innerText = "Password";
   resetPwd.style.padding = "0px 10px";
 
@@ -179,6 +185,11 @@
   linkTwo.innerText = "Don't have an account? ";
   let signupLink = document.createElement("a");
   signupLink.innerText = "Sign up";
+
+
+  /* Here add link for sign up  */
+
+
 
 
   /* appending links to second paragraph */
@@ -196,5 +207,9 @@
   container.append(box);
   body.append(container);
 
-
+  document.querySelector("form").addEventListener("submit", function () {
+    event.preventDefault();
+    alert("Login Successful!");
+   
+  });
 </script>
