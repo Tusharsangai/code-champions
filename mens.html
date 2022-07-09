@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mens</title>
+</head>
+
+<body>
+
+</html>
+</body>
+
+<script type="text/javascript">
+
+  let body = document.querySelector("body");
+
+  let container = document.createElement("div");
+  let box = document.createElement("div");
+  let items = [{ image: 'image', name: "Pause", details: "Men Cotton Long Sleeves Shrug", price: 359, mrp: "1, 499", disc: "-76%" }, { image: "image", name: "JUBINATION", details: "Men Wool  Sleeveless Sweater Pack of 1", price: 799, mrp: "1, 499", disc: -"47%" }]
+  for (let i = 0; i < items.length; i++) {
+    let card = document.createElement("div");
+    let img = document.createElement("img");
+    img.setAttribute("src", itmes[i].image);
+    /* heading section */
+    let head = document.createElement("p");
+    head.innerText = items[i].name;
+
+
+    /* details section */
+    let details = document.createElement("p");
+    details.innerText = items[i].details;
+
+
+    /* mrp section */
+    let priceTag = document.createElement("p");
+    let price = document.createElement("span");
+    price.innerText = "$ " + items[i].price;
+    let mrp = document.createElement("span");
+    mrp.innerText = items[i].mrp;
+    let discount = document.createElement("span");
+    discount.innerText = items[i].disc;
+    priceTag.append(price, mrp, discount);
+    card.append(img, head, details, priceTag);
+    box.append(card);
+
+  }
+
+
+
+</script>
