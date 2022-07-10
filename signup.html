@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <style>
+          
+            #container{
+               border-radius: 10px;
+               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                justify-content: center;
+                text-align: center;
+                border:0px;
+                width:450px;
+                height: 550px;
+                margin:100px 300px 100px 400px;
+                background-color: rgb(54, 199, 167);
+            }
+            #container>input { 
+               padding-left: 10px;
+               width:80%;
+               height:50px;
+               margin:10px ;
+               border:none
+               
+
+            }
+            #container>h1{
+                padding-top: 50px;
+                color:white
+            }
+            button{
+                font-weight: 800;
+                color:aliceblue;
+                border: none;
+                text-align: center;
+                width:80%;height:50px;
+               margin:10px ;
+               background-color: rgb(49, 164, 139);
+               
+               
+            
+            }
+            a{
+                text-decoration: none;
+                color:aliceblue;
+            }
+           
+
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="container" >
+            <h1>-Visitor-</h1>
+            <input id="fn" type="text" placeholder="Full Name">
+            <input id="eml" type="text" placeholder="Email">
+            <input id="or" type="text" placeholder="Organization">
+            <a href="https://www.google.com/"><button onClick="myfunction()">SIGN UP</button></a>
+            <a href="https://www.google.com/"><button onClick="returnvalue()" >RETURN </button></a>
+        </div>
+
+
+    </body>
+
+</html>
+<script>
+    function myfunction(){
+        let fullname=document.getElementById("fn").value
+        let email=document.getElementById("eml").value
+        let org=document.getElementById("or").value
+        alert("signup successful")
+    }
+    function returnvalue(){
+        let fullname=document.getElementById("fn").value=""
+        let email=document.getElementById("eml").value=""
+        let org=document.getElementById("or").value=""
+        
+
+        
+
+    }
+
+</script>
