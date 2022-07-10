@@ -169,6 +169,7 @@
   let resetPwd = document.createElement("a");
 
   /* Here add link for resetting the password  */
+   resetPwd.setAttribute("href","navbar.html");
 
 
 
@@ -188,6 +189,7 @@
 
 
   /* Here add link for sign up  */
+  signupLink.setAttribute("href","signup.html");
 
 
 
@@ -210,6 +212,7 @@
   document.querySelector("form").addEventListener("submit", function () {
     event.preventDefault();
     alert("Login Successful!");
+    window.location="navbar.html";
    
   });
 </script>
